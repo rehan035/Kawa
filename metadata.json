@@ -1,0 +1,6 @@
+{
+  "name": "Riaz Tannery & Atelier",
+  "description": "Sialkot source-origin leather tannery, B2B export catalog, and direct factory outlet for full-grain hides, saddlery, and tailored leather apparel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

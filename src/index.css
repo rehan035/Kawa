@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "EB Garamond", Georgia, serif;
+  --font-sans: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+  --color-ivory: #F5F0EB;
+  --color-parchment: #FDFBF7;
+  --color-inset: #EBE3D7;
+  --color-espresso: #1F1A17;
+  --color-cognac: #703816;
+  --color-brass: #C5A059;
+  --color-muted: #544840;
+  --color-rule: #D8CEBF;
+  --color-rust: #9C3A27;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-radius: 0px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #F5F0EB;
+    color: #1F1A17;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    margin: 0;
+    background-color: #F5F0EB;
+    color: #1F1A17;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.hard-frame-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(31, 26, 23, 0.85);
+}
+
+.mechanical-hover {
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mechanical-hover:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0px 0px #1F1A17;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mechanical-hover:hover {
+    transform: none;
+  }
+}
